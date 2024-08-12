@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
   isUserChecked: boolean = true;
-  imagePath: string = "../../assets/img/eye.jpg"
+  // imagePath: string = "assets/img/eye.jpg"
 
   loginObj: any = {
     email: "",

@@ -18,9 +18,9 @@
                             </div>
                         </div>
                         <div class="position-relative">
-                            <div>
+                            <div class="position-relative">
                                 <input type="password" class="login-input border-0 w-100 bg-transparent" #fPassword="ngModel" name="Password" [(ngModel)]="loginObj.Password" placeholder="Password" />
-                                <img [src]="imagePath" width="20px" height="20px" alt="img" />
+                                <img src="assets/images/eye.jpg" class="eye-img" width="20px" height="15px" alt="img" />
                                 <div>
                                     @if((fPassword?.touched || fPassword?.dirty) && fPassword?.errors?.['required']){
                                     <span class="text-danger">This filed is required*</span>

@@ -139,4 +139,10 @@ table {
 input:focus {
     outline: none;
 }
+.container{
+    max-width: 1608px !important;
 
+}
+img{
+    max-width: 100%;
+}

@@ -1,0 +1,123 @@
+.home-banner {
+    background-color: #6D6D6D;
+    padding: 75px 0 50px;
+}
+
+.banner-sub_title {
+    font-family: "Inter", sans-serif !important;
+    font-size: 12px;
+    font-weight: 500 !important;
+    line-height: 15px;
+    text-align: left;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.home-banner_title {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 55px;
+    text-align: left;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* ======= about section ======== */
+.about-beauty{
+    padding: 80px 0;
+}
+
+.right-beauty .beaty-desc {
+    font-family: "Inter", sans-serif !important;
+    font-size: 18px;
+    font-weight: 500 !important;
+    line-height: 25px;
+    text-align: left;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.right-beauty h3 {
+    font-family: "Alegreya Sans SC", sans-serif !important;
+    font-size: 30px;
+    font-weight: 700 !important;
+    line-height: 35px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #000;
+}
+
+.right-beauty h6 {
+    font-family: "Inter", sans-serif !important;
+    font-size: 20px;
+    font-weight: 400 !important;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #000;
+}
+
+.right-beauty h5 {
+    font-family: "Aoboshi One", serif !important;
+    font-size: 18px;
+    font-weight: 500 !important;
+    line-height: 25px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #000;
+    display: inline-block;
+}
+
+.right-beauty h5::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    bottom: 3px;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    background-color: #6D6D6D;
+}
+
+img.bg-about-beauty_section {
+    position: absolute;
+    z-index: -1;
+    top: -49%;
+    left: -6.5%;
+    transform: rotateX(43deg);
+}
+
+.right-beauty h6 {
+    font-family: "Inter", sans-serif !important;
+    font-size: 12px;
+    font-weight: 500 !important;
+    line-height: 15px;
+    text-align: left;
+    color: #000;
+}
+
+.about-beauty-list li {
+    list-style: none;
+}
+
+.discover-now_btn {
+    font-family: "Inter", sans-serif !important;
+    font-size: 20px;
+    font-weight: 400 !important;
+    line-height: 22px;
+    text-align: left;
+    color: #000;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid #47624F;
+}
+
+.beauty-list-content {
+    font-family: "Aoboshi One" !important;
+    font-size: 17px;
+    font-weight: 500 !important;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    padding-left: 20px;
+}

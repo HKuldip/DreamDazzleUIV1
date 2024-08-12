@@ -1,0 +1,32 @@
+.header_menu-list .nav-link{
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500 !important;
+    color: #000;
+    font-family: "Inter", sans-serif !important;
+}
+.top-header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+.header_menu-list .nav-link.active{
+    color: #000;
+    font-weight: 700 !important;
+}
+.header .navbar .navbar-brand{
+    margin-right: 100px;
+}
+.header .navbar{
+    max-width: 1802px;
+    width: 100%;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+.menu-icon{
+    padding-left: 60px;
+}
+.header-top-contain{
+    height: 50px;
+    background-color: #6D6D6D;
+}

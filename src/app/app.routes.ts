@@ -14,13 +14,14 @@ export const routes: Routes = [
         component: LoginComponent
     },
     {
-        path: '',
-        component: LayoutComponent,
-        children: [
-            {
-                path: 'home',
-                component: HomeComponent
-            }
-        ]
-    }
+        path: 'home',
+        component: HomeComponent
+    },
+    // {
+    //     path: '',
+    //     component: LayoutComponent,
+    //     children: [
+            
+    //     ]
+    // }
 ];
