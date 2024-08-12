@@ -1,0 +1,85 @@
+<div class="login-form vh-100">
+    <div class="login-innerContain d-flex align-items-center justify-content-center h-100">
+        @if (isUserChecked==true) {
+        <div class="form_inner-data">
+            <div>
+                <h2 class="login-title">Login</h2>
+            </div>
+            <div class="login-shadow">
+                <h2 class="login-titles">Hello! <br/> welcome back..</h2>
+                <form class="" #form="ngForm">
+                    <div class="text-center">
+                        <div>
+                            <input #fEmail="ngModel" name="email" [(ngModel)]="loginObj.email" type="email" class="login-input border-0 w-100 bg-transparent" placeholder="Email" required/>
+                            <div>
+                                @if((fEmail?.touched || fEmail?.dirty) && fEmail?.errors?.['required']){
+                                <span class="text-danger">This filed is required*</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <div>
+                                <input type="password" class="login-input border-0 w-100 bg-transparent" #fPassword="ngModel" name="Password" [(ngModel)]="loginObj.Password" placeholder="Password" />
+                                <img [src]="imagePath" width="20px" height="20px" alt="img" />
+                                <div>
+                                    @if((fPassword?.touched || fPassword?.dirty) && fPassword?.errors?.['required']){
+                                    <span class="text-danger">This filed is required*</span>
+                                    }
+                                </div>
+                            </div>
+                            <span class="position-absolute forgot-password">Forgot password</span>
+                        </div>
+                        <button data-mdb-button-init data-mdb-ripple-init class="btn loginbtn mt-5" type="button"
+                            [disabled]="form.invalid" (click)="Islogin()">Login</button>
+                    </div>
+                </form>
+                <div class="text-center pt-5">
+                    <p class="mb-2 switch-account" (click)="isUserChecked = false">dont’t have an account?..switch</p>
+
+                    <div class="login-singup d-flex align-items-center justify-content-center">
+                        <button class="loginbtn border-0 loginpage-btn">Login</button>
+                        <button class="loginbtn border-0 signinpage-btn" (click)="isUserChecked = false">Signup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    @else {
+        <div class="form_inner-data signup-form">
+            <div>
+                <h2 class="login-title">SignUp</h2>
+            </div>
+            <div class="login-shadow">
+                <h2 class="login-titles pb-2">LET’S GET STARTED</h2>
+                <h5 class="sign-sub-title">CREATE AN ACCOUNT</h5>
+                <form class="" #form="ngForm">
+                    <div class="text-center">
+                        <div>
+                            <input type="text" class="login-input border-0 w-100 bg-transparent" placeholder="Username" />
+                        </div>
+                        <div>
+                            <input type="email" class="login-input border-0 w-100 bg-transparent" placeholder="Email" />
+                        </div>
+                        <div class="position-relative">
+                            <div>
+                                <input type="password" class="login-input border-0 w-100 bg-transparent" placeholder="Password" />
+                                <!-- <img ngSrc="assets/img/eye.jpg" width="20px" alt="img" /> -->
+                            </div>
+                        </div>
+                        <button data-mdb-button-init data-mdb-ripple-init class="btn loginbtn mt-5" type="button"
+                            [disabled]="form.invalid" (click)="IsSignUp()">SignUp</button>
+                    </div>
+                </form>
+                <div class="text-center pt-5">
+                    <p class="mb-2 switch-account" (click)="isUserChecked = true">already have an account?..swich</p>
+
+                    <div class="login-singup d-flex align-items-center justify-content-center">
+                        <button class="loginbtn border-0 loginpage-btn" (click)="isUserChecked = true">Login</button>
+                        <button class="loginbtn border-0 signinpage-btn">Signup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+</div>
