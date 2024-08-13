@@ -1,0 +1,17 @@
+<section class="news-latter">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-9 col-12">
+                <div class="news_latter-contain">
+                    <h2 class="mb-5 common-section-title">Stay Up to Date with All News and Exclusive Offers</h2>
+                    <div>
+                        <form #form="ngForm">
+                            <input class="newslsster-input" type="email" name="email" placeholder="Add Your Email Address" [(ngModel)]="email" required />
+                            <button class="subscribe-button" (click)="onSubscribe()">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

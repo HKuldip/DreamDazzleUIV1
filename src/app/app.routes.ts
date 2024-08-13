@@ -13,15 +13,15 @@ export const routes: Routes = [
         path: 'login',
         component: LoginComponent
     },
+
     {
-        path: 'home',
-        component: HomeComponent
-    },
-    // {
-    //     path: '',
-    //     component: LayoutComponent,
-    //     children: [
-            
-    //     ]
-    // }
+        path: '',
+        component: LayoutComponent,
+        children: [
+            {
+                path: 'home',
+                component: HomeComponent
+            },
+        ]
+    }
 ];

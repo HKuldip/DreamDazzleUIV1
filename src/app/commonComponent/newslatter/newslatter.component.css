@@ -1,0 +1,36 @@
+.news-latter{
+    padding: 60px 0;
+}
+/* .news_latter-contain h2 {
+    font-size: 55px;
+    line-height: 60px;
+    text-align: center;
+    color: #4D5359;
+} */
+.newslsster-input{
+    font-size: 15px;
+    border: 0;
+    font-weight: 400;
+    line-height: 20px;
+    background-color: #E9E8E8;
+    color: #000000;
+    font-family: var(--inter-font);
+    padding: 17.5px;
+    width: 72%;
+}
+.newslsster-input::placeholder,
+.newslsster-input::-ms-input-placeholder{
+    color: #000;
+}
+.subscribe-button {
+    background-color: #000;
+    font-family: var(--inter-font);
+    font-size: 15px;
+    border: 0;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    width: 28%;
+    padding: 15px 0;
+}

@@ -1,10 +1,9 @@
 .home-banner {
-    background-color: #6D6D6D;
     padding: 75px 0 50px;
 }
 
 .banner-sub_title {
-    font-family: "Inter", sans-serif !important;
+    font-family: var(--inter-font) !important;
     font-size: 12px;
     font-weight: 500 !important;
     line-height: 15px;
@@ -23,12 +22,12 @@
 }
 
 /* ======= about section ======== */
-.about-beauty{
+.about-beauty {
     padding: 80px 0;
 }
 
 .right-beauty .beaty-desc {
-    font-family: "Inter", sans-serif !important;
+    font-family: var(--inter-font) !important;
     font-size: 18px;
     font-weight: 500 !important;
     line-height: 25px;
@@ -38,7 +37,7 @@
 }
 
 .right-beauty h3 {
-    font-family: "Alegreya Sans SC", sans-serif !important;
+    font-family: var(--alegreya-sans-font) !important;
     font-size: 30px;
     font-weight: 700 !important;
     line-height: 35px;
@@ -48,7 +47,7 @@
 }
 
 .right-beauty h6 {
-    font-family: "Inter", sans-serif !important;
+    font-family: var(--inter-font) !important;
     font-size: 20px;
     font-weight: 400 !important;
     line-height: 30px;
@@ -58,7 +57,7 @@
 }
 
 .right-beauty h5 {
-    font-family: "Aoboshi One", serif !important;
+    font-family: var(--aoboshi-font) !important;
     font-size: 18px;
     font-weight: 500 !important;
     line-height: 25px;
@@ -88,7 +87,7 @@ img.bg-about-beauty_section {
 }
 
 .right-beauty h6 {
-    font-family: "Inter", sans-serif !important;
+    font-family: var(--inter-font) !important;
     font-size: 12px;
     font-weight: 500 !important;
     line-height: 15px;
@@ -101,7 +100,7 @@ img.bg-about-beauty_section {
 }
 
 .discover-now_btn {
-    font-family: "Inter", sans-serif !important;
+    font-family: var(--inter-font) !important;
     font-size: 20px;
     font-weight: 400 !important;
     line-height: 22px;
@@ -113,11 +112,67 @@ img.bg-about-beauty_section {
 }
 
 .beauty-list-content {
-    font-family: "Aoboshi One" !important;
+    font-family: var(--aoboshi-font) !important;
     font-size: 17px;
     font-weight: 500 !important;
     line-height: 20px;
     letter-spacing: 0.05em;
     text-align: left;
     padding-left: 20px;
+}
+
+/* ======= Best Quality ========= */
+
+.product-quality-subtitle {
+    font-family: var(--inter-font);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000;
+    text-transform: uppercase;
+}
+.product-quality-title{
+    font-family: var(--alegreya-sans-font);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #000;
+}
+
+.product_quality-descrption{
+    font-family: var(--inter-font);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #000;
+    text-transform: capitalize;
+}
+.all-product_btn{
+    font-family: var(--inter-font);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.product-uses {
+    font-family: var(--inter-font);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.product_descrption {
+    font-family: var(--inter-font);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.product-sellertype-title{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
 }

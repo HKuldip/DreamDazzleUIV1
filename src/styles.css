@@ -84,7 +84,6 @@ video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
@@ -131,18 +130,59 @@ table {
 }
 
 * {
-    font-family: "Baumans", system-ui !important;
-    font-weight: 400 !important;
+    font-family: "Baumans", system-ui;
+    font-weight: 400;
     font-style: normal;
 }
 
 input:focus {
     outline: none;
 }
-.container{
+
+.container {
     max-width: 1608px !important;
 
 }
-img{
+
+img {
     max-width: 100%;
 }
+a{
+    text-decoration: none !important;
+}
+
+:root {
+    --main-bg-color: #6D6D6D;
+    --text-white: #fff;
+    --inter-font: "Inter", sans-serif;
+    --hind-font: "Hind", sans-serif;
+    --aoboshi-font: "Aoboshi One", serif;
+    --alegreya-sans-font:"Alegreya Sans SC", sans-serif;
+}
+
+footer,
+.home-banner {
+    background-color: var(--main-bg-color);
+}
+.common-section-title{
+    font-size: 55px;
+    line-height: 60px;
+    text-align: center;
+    color: #4D5359;
+}
+
+.common-section-subtitle{
+    font-family: var(--inter-font);
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 400;
+    color: #000;
+}
+.slick-slider {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    background: rgb(14, 13, 13);
+  }
