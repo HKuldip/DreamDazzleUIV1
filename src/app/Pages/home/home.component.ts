@@ -24,14 +24,40 @@ export class HomeComponent {
     { img: "assets/images/img2.png" },
     { img: "assets/images/img3.png" },
   ];
-  slideConfig = { "slidesToShow": 6, "slidesToScroll": 1 };
+  slideConfig = {
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+    ]
+  };
 
   slickInit(e: any) {
     console.log('slick initialized');
   }
 
   breakpoint(e: any) {
-    console.log('breakpoint');
+    console.log('breakpoint', e);
   }
 
   afterChange(e: any) {

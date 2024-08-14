@@ -185,4 +185,27 @@ footer,
     overflow: hidden;
     margin: auto;
     background: rgb(14, 13, 13);
-  }
+}
+
+.instagram .slick-list {
+    background-color: #fff;
+}
+
+@media screen and (max-width:1200px) {
+    .common-section-title{
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    .common-section-title{
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+@media screen and (max-width:576px) {
+    .common-section-title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
