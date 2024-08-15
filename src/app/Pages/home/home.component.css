@@ -40,7 +40,7 @@
     text-transform: capitalize;
 }
 
-.right-beauty h3 {
+/* .right-beauty h3 {
     font-family: var(--alegreya-sans-font) !important;
     font-size: 30px;
     font-weight: 700 !important;
@@ -48,7 +48,7 @@
     text-transform: uppercase;
     text-align: left;
     color: #000;
-}
+} */
 
 .right-beauty h6 {
     font-family: var(--inter-font) !important;
@@ -136,13 +136,13 @@ img.bg-about-beauty_section {
     text-transform: uppercase;
 }
 
-.product-quality-title {
+/* .product-quality-title {
     font-family: var(--alegreya-sans-font);
     font-size: 30px;
     font-weight: 600;
     line-height: 25px;
     color: #000;
-}
+} */
 
 .product_quality-descrption {
     font-family: var(--inter-font);
@@ -268,11 +268,11 @@ img.bg-about-beauty_section {
     .home-right-content{
         max-width: 450px;
     }
-    .right-beauty h3,
+    /* .right-beauty h3,
     .product-quality-title{
         font-size: 24px;
         line-height: 30px;
-    }
+    } */
     .right-beauty .beaty-desc{
         font-size: 16px;
         line-height: 23px;
@@ -322,8 +322,8 @@ img.bg-about-beauty_section {
         font-size: 13px;
         line-height: 18px;
     }
-    .product-sellertype-title,
-    .right-beauty h3{
+    /* .right-beauty h3, */
+    .product-sellertype-title{
         font-size: 20px;
         line-height: 25px;
     }

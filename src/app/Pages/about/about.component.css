@@ -1,0 +1,161 @@
+.about-banner {
+    padding: 60px 0 80px;
+}
+
+.abour-banner-content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-banner-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: var(--inter-font);
+}
+
+.about-banner-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #000;
+    font-family: var(--inter-font);
+}
+
+.about-banner-desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    font-family: var(--inter-font);
+}
+
+.explore-banner-btn {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    font-family: var(--inter-font);
+}
+
+/* ==== our success ==== */
+.our-success {
+    padding: 70px 0;
+}
+
+.our-succes-imgbox img {
+    max-height: 400px;
+}
+
+.our-success-subtitle {
+    font-family: var(--inter-font);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #4D5359;
+    text-transform: uppercase;
+}
+
+.our-success-descrption p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #000;
+    font-family: var(--inter-font);
+}
+
+.long-lasting-title {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 65px;
+    text-align: left;
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(197, 22, 29, 0.3);
+    letter-spacing: 0.05em;
+    font-family: var(--aclonica-font);
+}
+
+.kiss-me-contain::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url('../../../assets/images/kissme.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-25deg);
+}
+.follo-us-section{
+    background-color: #000;
+    padding: 25px 0 0;
+}
+.follow-us-img{
+    height: 120px;
+}
+.follo-us-section .instagram{
+    padding: 20px 0;
+}
+
+@media screen and (min-width:992px) {
+    .our-success-contain {
+        max-width: 85%;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .kiss-me-contain {
+        height: 650px;
+    }
+    .kiss-me-contain img{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .our-success {
+        padding: 60px 0;
+    }
+
+}
+
+@media screen and (max-width:991.99px) {
+    .our-success {
+        padding: 50px 0;
+    }
+
+    .long-lasting-title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .our-success {
+        padding: 40px 0;
+    }
+
+    .our-success-descrption p {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .long-lasting-title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .long-lasting-title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+}

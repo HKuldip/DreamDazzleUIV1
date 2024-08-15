@@ -29,7 +29,7 @@
             <div class="col-lg-7 pt-lg-0 pt-3">
                 <div class="right-beauty">
                     <h6 class="text-black">About us</h6>
-                    <h3 class="text-black pt-2 pb-lg-3 pb-2">Bring Your Natural Beauty</h3>
+                    <h3 class="text-black common-section-inner-title pt-2 pb-lg-3 pb-2">Bring Your Natural Beauty</h3>
                     <h5 class="text-black position-relative">We Belong to Something Beautiful</h5>
                     <p class="text-black py-lg-4 py-3 beaty-desc">Our company announced a new tagline and manifesto, to
                         reinforce our dedication to fostering
@@ -65,7 +65,7 @@
             <div class="col-md-4 pb-lg-0 pb-3">
                 <div class="product-quality-box text-left">
                     <p class="product-quality-subtitle text-black">best quality</p>
-                    <h4 class="product-quality-title text-black py-2 pb-3">featured products</h4>
+                    <h4 class="product-quality-title common-section-inner-title text-black py-2 pb-3">featured products</h4>
                     <p class="product_quality-descrption text-black pb-lg-4 pb-3">Lorem ipsum dolor sit amet, adipiscing elit,
                         sed do eiusmod tempor incididunt.</p>
                     <a href="" class="all-product_btn mt-3 text-black">view all products</a>
@@ -146,16 +146,5 @@
         </div>
     </div>
 </section>
-<section class="instagram">
-    <div class="">
-        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
-            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-            (beforeChange)="beforeChange($event)">
-            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-                <img src="{{ slide.img }}" alt="" width="100%">
-            </div>
-        </ngx-slick-carousel>
-    </div>
-</section>
-
+<app-instagram className="home"></app-instagram>
 <app-newslatter></app-newslatter>
