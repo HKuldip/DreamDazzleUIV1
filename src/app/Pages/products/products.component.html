@@ -1,0 +1,38 @@
+<section class="product-banner position-relative">
+    <img src="assets/images/white-ring.png" alt="img" class="left-ring" />
+    <img src="assets/images/white-ring.png" alt="img" class="right-ring" />
+    <div class="container">
+        <div class="row">
+                <div class="col-lg-6">
+                    <div class="product-banner-contain">
+                        <h3 class="text-white text-center pt-4 pb-5">Products</h3>
+                        <p class="text-white">From Dreamy Lip Hues to the ultimate Brow Saviours</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-lg-end text-center">
+                    <div class="product-banner_img d-inline-block position-relative pt-lg-0 pt-4">
+                        <img src="assets/images/ring.png" alt="img" class="center-ring" />
+                        <img src="assets/images/product-banner.png" class="product-banner_imgs" alt="img" />
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+<section class="products-section pb-4">
+    <div class="container">
+        <div class="section-title-contain text-center py-5">
+            <h2 class="common-section-title text-uppercase">Our Products</h2>
+        </div>
+        <div class="row">
+            @for (item of productList; track $index) {
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="product-contain">
+                    <img class="product_imgs" [src]="item.src" />
+                    <h5 class="product-sellertype-title prodcut-list_title text-uppercase text-center py-3">{{item.title}}</h5>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+<app-newslatter></app-newslatter>

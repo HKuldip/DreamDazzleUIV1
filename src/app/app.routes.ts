@@ -3,6 +3,8 @@ import { LoginComponent } from './Pages/login/login.component';
 import { LayoutComponent } from './Pages/layout/layout.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { AboutComponent } from './Pages/about/about.component';
+import { ProductsComponent } from './Pages/products/products.component';
+import { ShopComponent } from './Pages/shop/shop.component';
 
 export const routes: Routes = [
     {
@@ -26,6 +28,14 @@ export const routes: Routes = [
             {
                 path: 'about',
                 component: AboutComponent
+            },
+            {
+                path: 'products',
+                component: ProductsComponent
+            },
+            {
+                path: 'shop',
+                component: ShopComponent
             },
         ]
     }

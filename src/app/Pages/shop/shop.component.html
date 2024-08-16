@@ -1,0 +1,47 @@
+<section class="shop-banner">
+    <div class="container">
+        <div class="">
+            <h2 class="shop-banner-title text-uppercase text-center">Shop</h2>
+            <p class="shop-bannee-desc text-center pt-4 pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            <ul class="d-flex align-items-center justify-content-center product-banner-list">
+                <li class="me-3 px-2 py-1">face</li>
+                <li class="me-3 px-2 py-1">hair styling</li>
+                <li class="me-3 px-2 py-1">Lips</li>
+                <li class="px-2 py-1">skin care</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="shop-product-section">
+    <div class="container">
+        <div class="row">
+            @for (item of productList; track $index) {
+            <div class="col-lg-4 col-md-6 col-12 pb-2">
+                <div class="product-detail_box">
+                    <div class="shop-product-img">
+                        <img [src]="item.src" alt="img" class="w-100" />
+                        <div class="overlay">
+                            <div class="zoom-icon"><img src="assets/images/search-shop.png" alt="img" width="50px" /></div> <!-- Unicode for magnifying glass -->
+                        </div>
+                    </div>
+                    <div class="product-desc_box py-4 text-center">
+                        <p class="product-uses text-black">{{item.title}}</p>
+                        <h5 class="product_price text-black py-3">Rs.{{item.price}}</h5>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="assets/images/star.png" alt="star" />
+                            <img src="assets/images/star.png" alt="star" />
+                            <img src="assets/images/star.png" alt="star" />
+                            <img src="assets/images/star.png" alt="star" />
+                            <img src="assets/images/star.png" alt="star" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+<app-newslatter></app-newslatter>
