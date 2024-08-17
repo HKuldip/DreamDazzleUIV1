@@ -1,9 +1,12 @@
 .header_menu-list .nav-link{
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 25px;
     font-weight: 500 !important;
     color: #000;
-    font-family: "Inter", sans-serif !important;
+    font-family: var(--inter-font);
+}
+.navbar-brand img{
+    height: 100px;
 }
 .top-header{
     position: sticky;
@@ -12,7 +15,6 @@
     z-index: 1;
 }
 .header_menu-list .nav-link.active{
-    color: #000;
     font-weight: 700 !important;
 }
 .header .navbar .navbar-brand{
@@ -30,4 +32,10 @@
 .header-top-contain{
     height: 50px;
     background-color: #6D6D6D;
+}
+
+@media screen and (max-width:425px) {
+    .navbar-brand{
+        margin-right: 0 !important;
+    }
 }
