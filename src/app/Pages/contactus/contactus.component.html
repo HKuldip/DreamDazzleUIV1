@@ -1,0 +1,91 @@
+<section class="contact-us-banner">
+    <div class="container">
+        <div class="contact-us-contain text-center">
+            <h2 class="text-white pb-5">Contact Us</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et
+                dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+                lacus vel facilisis.</p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="get-touch-header py-5 my-4">
+            <p class="mb-4">Keep Connected</p>
+            <h2>Get in Touch</h2>
+        </div>
+        <div class="contact-form-view justify-content-center align-items-center position-relative">
+            <div class="contact-form-contain">
+                <p class="write_us-title pb-5">WRITE To US</p>
+                <form class="contact-form" #form="ngForm">
+                    <div>
+                        <div class="pb-3">
+                            <input #fName="ngModel" name="email" [(ngModel)]="contactUs.name" type="text"
+                                class="login-input w-100 bg-transparent" placeholder="Name" required />
+                            <div>
+                                @if((fName?.touched || fName?.dirty) && fName?.errors?.['required']){
+                                <span class="text-danger">This filed is required*</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="pb-3">
+                            <input #fphone="ngModel" name="phone" [(ngModel)]="contactUs.phone" type="number"
+                                class="login-input w-100 bg-transparent" placeholder="Phone" required />
+                            <div>
+                                @if((fphone?.touched || fphone?.dirty) && fphone?.errors?.['required']){
+                                <span class="text-danger">This filed is required*</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="pb-3">
+                            <input #fEmail="ngModel" name="email" [(ngModel)]="contactUs.email" type="email"
+                                class="login-input w-100 bg-transparent" placeholder="Email" required />
+                            <div>
+                                @if((fEmail?.touched || fEmail?.dirty) && fEmail?.errors?.['required']){
+                                <span class="text-danger">This filed is required*</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="pb-3">
+                            <textarea #fMessage="ngModel" name="message" [(ngModel)]="contactUs.message" type="text"
+                                class="login-input w-100 bg-transparent" placeholder="Message"
+                                required></textarea>
+                            <div>
+                                @if((fMessage?.touched || fMessage?.dirty) && fMessage?.errors?.['required']){
+                                <span class="text-danger">This filed is required*</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div>
+                    <button class="contact-submit border-0 w-100 text-white">Submit</button>
+                </div>
+            </div>
+            <div class="contact-info position-md-relative">
+                <div class="contact-info_inner">
+                    <h3 class="text-center pb-5">Contact Info</h3>
+                    <p class="contact-desc">Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+                        SedMaecenas nec odio et ante
+                        tincidunt tempus.</p>
+                    <ul class="location-list pt-5">
+                        <li class="pb-4 d-flex align-items-center">
+                            <img src="assets/images/location-cu.png" width="25px" alt="location" />
+                            <p class="ms-3">silver business point, G-20, Uttran, Surat, Gujarat 394105</p>
+                        </li>
+                        <li class="pb-4 d-flex align-items-center">
+                            <img src="assets/images/call-cn.png" width="25px" alt="location" />
+                            <a class="ms-3" href="tel:+919737430468">+91 9737430468</a>
+                        </li>
+                        <li class="pb-4 d-flex align-items-center">
+                            <img src="assets/images/mail.png" width="25px" alt="location" />
+                            <a class="ms-3" href="mailto:info@dreamdazzle.com">info&#x0040;dreamdazzle.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-newslatter></app-newslatter>
