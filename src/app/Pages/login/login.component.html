@@ -1,4 +1,4 @@
-<div class="login-form vh-100">
+<div class="login-form ">
     <div class="login-innerContain d-flex align-items-center justify-content-center h-100">
         @if (isUserChecked==true) {
         <div class="form_inner-data">
@@ -10,7 +10,7 @@
                 <form class="" #form="ngForm">
                     <div class="text-center">
                         <div>
-                            <input #fEmail="ngModel" name="email" [(ngModel)]="loginObj.email" type="email"
+                            <input #fEmail="ngModel" name="username" [(ngModel)]="loginObj.username" type="email"
                                 class="login-input border-0 w-100 bg-transparent" placeholder="Email" required />
                             <div>
                                 @if((fEmail?.touched || fEmail?.dirty) && fEmail?.errors?.['required']){
@@ -54,47 +54,42 @@
             </div>
             <div class="login-shadow">
                 <h2 class="login-titles pb-2">LET’S GET STARTED</h2>
-                <h5 class="sign-sub-title">CREATE AN ACCOUNT</h5>
+                <h5 class="sign-sub-title">create an account</h5>
                 <form class="" #form="ngForm">
                     <div class="text-center">
                         <div>
-                            <input #fFirstName="ngModel" name="FisrtName" [(ngModel)]="signUpForm.FirstName" type="text"
-                                class="login-input border-0 w-100 bg-transparent" placeholder="Fisrt Name" required />
-                            <div>
-                                @if((fFirstName?.touched || fFirstName?.dirty) && fFirstName?.errors?.['required']){
-                                <span class="text-danger">This filed is required*</span>
-                                }
+                            <input #fFirstName="ngModel" name="FirstName" [(ngModel)]="signUpForm.FirstName" type="text"
+                                class="login-input border-0 w-100 bg-transparent" placeholder="First Name" required />
+                            <div *ngIf="fFirstName.touched && fFirstName.invalid">
+                                <span class="text-danger">First Name is required</span>
                             </div>
                         </div>
+                        
                         <div>
                             <input #fLasttName="ngModel" name="LastName" [(ngModel)]="signUpForm.LastName" type="text"
                                 class="login-input border-0 w-100 bg-transparent" placeholder="Last Name" required />
-                            <div>
-                                @if((fLasttName?.touched || fLasttName?.dirty) && fLasttName?.errors?.['required']){
-                                <span class="text-danger">This filed is required*</span>
-                                }
+                            <div *ngIf="fLasttName.touched && fLasttName.invalid">
+                                <span class="text-danger">Last Name is required*</span>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <input #fEmail="ngModel" name="Email" [(ngModel)]="signUpForm.Email" type="email"
                                     class="login-input border-0 w-100 bg-transparent" placeholder="Email" required />
-                                <div>
-                                    @if((fEmail?.touched || fEmail?.dirty) && fEmail?.errors?.['required']){
+                                <div *ngIf="fEmail.touched && fEmail.invalid">
                                     <span class="text-danger">This filed is required*</span>
-                                    }
                                 </div>
                             </div>
                             <div>
-                                <button class="btn btn-primary" [disabled]="form.invalid" (click)="VerifyEmail()">Vevrify Email</button>
+                                <button class="btn btn-primary mt-1" [disabled]="form.invalid" (click)="VerifyEmail()">Vevrify Email</button>
                             </div>
                         </div>
-                        <button data-mdb-button-init data-mdb-ripple-init class="btn loginbtn mt-5" type="button"
+                        <button data-mdb-button-init data-mdb-ripple-init class="btn loginbtn mt-4" type="button"
                             [disabled]="form.invalid" (click)="IsSignUp()">SignUp</button>
                     </div>
                 </form>
-                <div class="text-center pt-5">
-                    <p class="mb-2 switch-account" (click)="isUserChecked = true">already have an account?..swich</p>
+                <div class="text-center pt-4">
+                    <p class="mb-1 switch-account" (click)="isUserChecked = true">already have an account?..swich</p>
 
                     <div class="login-singup d-flex align-items-center justify-content-center">
                         <button class="loginbtn border-0 loginpage-btn" (click)="isUserChecked = true">Login</button>
