@@ -13,7 +13,7 @@ export class ResetpasswordComponent {
 
   
   resetpassword: any = {
-    Token:"",
+   
     email: "",
     NewPassword: "",
     ConfirmPassword:""
@@ -21,10 +21,9 @@ export class ResetpasswordComponent {
 
   resetPasswords()
  {
-  debugger
     this.loginSrvices.resetPassword(this.resetpassword).subscribe((res: any) => {
       if (res.isSuccess) {
-        debugger
+      
         alert(res.message)
       }
       else {

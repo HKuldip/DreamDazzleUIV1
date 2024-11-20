@@ -7,15 +7,16 @@ import { addUser, EmailVerify, ForgotPassword, resetPassword, UserLogin } from "
 })
 export class LoginServices {
 
+
     constructor(private http: HttpClient) { }
 
     veryfyEmail(Mail: string) {
-        debugger
+      
         return this.http.get(`${EmailVerify}/${Mail}`);
     }
 
     addUser(data: void) {
-        debugger
+
         return this.http.post(addUser, data);
     }
     UserLogin(login : any)
@@ -24,12 +25,12 @@ export class LoginServices {
 
     }
     ForgotPassword(Mail: string) {
-        debugger
+   
         return this.http.get(`${ForgotPassword}/${Mail}`);
     }
     
     resetPassword(data: void) {
-        debugger;
+      
         return this.http.post(resetPassword,data);
     }
    

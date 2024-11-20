@@ -42,10 +42,10 @@ export class LoginComponent {
     })
   }
   IsSignUp() {
-    debugger
+  
     this.loginSrvices.addUser(this.signUpForm).subscribe((res: any) => {
       if (res.isSuccess) {
-        debugger
+      
         alert(res.message)
       }
       else {
@@ -54,10 +54,10 @@ export class LoginComponent {
     })
   }
   VerifyEmail() {
-    debugger
+
     this.loginSrvices.veryfyEmail(`?Email=${this.signUpForm.Email}`).subscribe((res: any) => {
       if (res.isSuccess) {
-        debugger
+      
         alert(res.message)
       }
       else {
@@ -67,10 +67,10 @@ export class LoginComponent {
   }
   forgotPassword()
   {
-    debugger
+    
     this.loginSrvices.ForgotPassword(`?Email=${this.loginObj.username}`).subscribe((res: any) => {
       if (res.isSuccess) {
-        debugger
+      
         alert(res.message)
       }
       else {
