@@ -15,14 +15,12 @@ import { ToastrService } from 'ngx-toastr';
 export class LoginComponent {
   isUserChecked: boolean = true;
   // imagePath: string = "assets/img/eye.jpg"
-
+  passwordFieldType: string = 'password';
 
   constructor(private loginSrvices: LoginServices) { }
 
-  mailSuccess: boolean = false;
-
   loginObj: any = {
-    email: "",
+    username: "",
     Password: ""
   }
 
@@ -34,11 +32,20 @@ export class LoginComponent {
 
 
   Islogin() {
-
+    this.loginSrvices.UserLogin(this.loginObj).subscribe((res: any) => {
+      if (res.isSuccess) {
+        alert(res.message)
+      }
+      else {
+        alert(res.message)
+      }
+    })
   }
   IsSignUp() {
+  
     this.loginSrvices.addUser(this.signUpForm).subscribe((res: any) => {
       if (res.isSuccess) {
+      
         alert(res.message)
       }
       else {
@@ -47,13 +54,31 @@ export class LoginComponent {
     })
   }
   VerifyEmail() {
+
     this.loginSrvices.veryfyEmail(`?Email=${this.signUpForm.Email}`).subscribe((res: any) => {
       if (res.isSuccess) {
+      
         alert(res.message)
       }
       else {
         alert(res.message)
       }
     })
+  }
+  forgotPassword()
+  {
+    
+    this.loginSrvices.ForgotPassword(`?Email=${this.loginObj.username}`).subscribe((res: any) => {
+      if (res.isSuccess) {
+      
+        alert(res.message)
+      }
+      else {
+        alert(res.message)
+      }
+    })
+  }
+  togglePasswordVisibility(): void {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
   }
 }
