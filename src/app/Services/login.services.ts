@@ -13,6 +13,7 @@ export class LoginServices {
     veryfyEmail(Mail: string) {
       
         return this.http.get(`${EmailVerify}/${Mail}`);
+        
     }
 
     addUser(data: void) {
