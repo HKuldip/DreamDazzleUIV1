@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { AddUser, EmailVerify } from "../Constant/api.conts";
+import { addUser, EmailVerify, ForgotPassword, resetPassword, UserLogin } from "../Constant/api.conts";
 
 @Injectable({
     providedIn: 'root'
@@ -10,11 +10,28 @@ export class LoginServices {
     constructor(private http: HttpClient) { }
 
     veryfyEmail(Mail: string) {
+        debugger
         return this.http.get(`${EmailVerify}/${Mail}`);
     }
 
     addUser(data: void) {
-        return this.http.post(AddUser, data);
+        debugger
+        return this.http.post(addUser, data);
     }
+    UserLogin(login : any)
+    {
+        return this.http.post(UserLogin,login);
 
+    }
+    ForgotPassword(Mail: string) {
+        debugger
+        return this.http.get(`${ForgotPassword}/${Mail}`);
+    }
+    
+    resetPassword(data: void) {
+        debugger;
+        return this.http.post(resetPassword,data);
+    }
+   
+  
 }
