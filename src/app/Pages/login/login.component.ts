@@ -1,83 +1,90 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { LoginServices } from '../../Services/login.services';
+import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-
+import { LoginServices } from '../../Services/login.services';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, NgOptimizedImage],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ToastrModule 
+  ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css', 
+})
+export class LoginComponent {
+  constructor(
+    private loginServices: LoginServices,
+    private toastr: ToastrService,
+    private router: Router,
+  ) {}
+  @Injectable({
+  providedIn: 'root'
 })
 
-export class LoginComponent {
   isUserChecked: boolean = true;
-  // imagePath: string = "assets/img/eye.jpg"
   passwordFieldType: string = 'password';
 
-  constructor(private loginSrvices: LoginServices) { }
-
   loginObj: any = {
-    username: "",
-    Password: ""
-  }
+    username: '',
+    Password: '',
+  };
 
   signUpForm: any = {
-    FirstName: "",
-    LastName: "",
-    Email: ""
-  }
-
+    FirstName: '',
+    LastName: '',
+    Email: '',
+  };
 
   Islogin() {
-    this.loginSrvices.UserLogin(this.loginObj).subscribe((res: any) => {
+    this.loginServices.UserLogin(this.loginObj).subscribe((res: any) => {
       if (res.isSuccess) {
-        alert(res.message)
+        this.router.navigate(['/home']);
+      } else {
+        this.toastr.error(res.message, 'Login Failed');
       }
-      else {
-        alert(res.message)
-      }
-    })
+    });
   }
-  IsSignUp() {
-  
-    this.loginSrvices.addUser(this.signUpForm).subscribe((res: any) => {
-      if (res.isSuccess) {
-      
-        alert(res.message)
-      }
-      else {
-        alert(res.message)
-      }
-    })
-  }
-  VerifyEmail() {
 
-    this.loginSrvices.veryfyEmail(`?Email=${this.signUpForm.Email}`).subscribe((res: any) => {
+  IsSignUp() {
+    this.loginServices.addUser(this.signUpForm).subscribe((res: any) => {
       if (res.isSuccess) {
-      
-        alert(res.message)
+        this.toastr.success(res.message, 'Sign-Up Successful');
+        this.isUserChecked = true;
+        this.router.navigate(['/login']);
+        
+      } else {
+        this.toastr.error(res.message, 'Sign-Up Failed');
       }
-      else {
-        alert(res.message)
-      }
-    })
+    });
   }
-  forgotPassword()
-  {
-    
-    this.loginSrvices.ForgotPassword(`?Email=${this.loginObj.username}`).subscribe((res: any) => {
+  
+
+  VerifyEmail() {
+    this.loginServices.veryfyEmail(`?Email=${this.signUpForm.Email}`).subscribe((res: any) => {
       if (res.isSuccess) {
-      
-        alert(res.message)
+        this.toastr.success(res.message, 'Email Verified');
+      } else {
+        this.toastr.error(res.message, 'Verification Failed');
       }
-      else {
-        alert(res.message)
-      }
-    })
+    });
   }
+
+  forgotPassword() {
+    this.loginServices.ForgotPassword(`?Email=${this.loginObj.username}`).subscribe((res: any) => {
+      if (res.isSuccess) {
+        this.toastr.success(res.message, 'Password Reset Email Sent');
+      } else {
+        this.toastr.error(res.message, 'Password Reset Failed');
+      }
+    });
+  }
+
   togglePasswordVisibility(): void {
     this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
   }
