@@ -57,6 +57,7 @@ export class LoginComponent {
         this.toastr.success(res.message, 'Sign-Up Successful');
         this.isUserChecked = true;
         this.router.navigate(['/login']);
+        
       } else {
         this.toastr.error(res.message, 'Sign-Up Failed');
       }
