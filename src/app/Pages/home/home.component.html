@@ -9,8 +9,9 @@
             <div class="col-xl-7 col-md-6">
                 <div class="home-right-content ps-lg-5 ps-md-2 pt-4">
                     <h6 class="banner-sub_title  text-center text-md-start  pb-3">A Nature’s Touch</h6>
-                    <h1 class="home-banner_title text-center text-md-start "><span class="text-white">GET 20%</span> Off on all  Cosmetic Cream
-                         Packs
+                    <h1 class="home-banner_title text-center text-md-start "><span class="text-white">GET 20%</span> Off
+                        on all Cosmetic Cream
+                        Packs
                     </h1>
                 </div>
             </div>
@@ -65,8 +66,10 @@
             <div class="col-md-4 pb-lg-0 pb-3">
                 <div class="product-quality-box text-left">
                     <p class="product-quality-subtitle text-black">best quality</p>
-                    <h4 class="product-quality-title common-section-inner-title text-black py-2 pb-3">featured products</h4>
-                    <p class="product_quality-descrption text-black pb-lg-4 pb-3">Lorem ipsum dolor sit amet, adipiscing elit,
+                    <h4 class="product-quality-title common-section-inner-title text-black py-2 pb-3">featured products
+                    </h4>
+                    <p class="product_quality-descrption text-black pb-lg-4 pb-3">Lorem ipsum dolor sit amet, adipiscing
+                        elit,
                         sed do eiusmod tempor incididunt.</p>
                     <a href="" class="all-product_btn mt-3 text-black">view all products</a>
                 </div>
@@ -109,21 +112,48 @@
 <section class="best-seller py-lg-5 py-3">
     <div class="container">
         <div class="section-title-contain text-center pb-lg-5 pb-3">
-            <h4 class="common-section-subtitle pb-1">best Beauty</h4>
+            <h4 class="common-section-subtitle pb-1">Best Beauty</h4>
             <h2 class="common-section-title">Our Bestseller</h2>
         </div>
-        <div class="row">
-            @for (item of bestSeller; track $index) {
-            <div class="col-lg-4 col-md-6">
-                <div class="product-seller-box text-center">
-                    <img [src]="item.src" class="w-100" />
-                    <h5 class="product-sellertype-title py-md-3 py-2">{{item.title}}</h5>
+        <div class="scrollable-container">
+            <div class="row">
+                <div *ngIf="paginatedCategories.length === 1"
+                    class="col-lg-4 col-md-4 custom-center-container">
+                    <div class="product-seller-box">
+                        <img [src]="paginatedCategories[0]?.categoryImage" style="height: 250px;" class="w-100" />
+                        <p class="product-sellertype-title py-md-3 py-2" style="font-size: 22px !important;">
+                            {{ paginatedCategories[0]?.productCategoryName }}
+                        </p>
+                    </div>
+                </div>
+                <div *ngIf="paginatedCategories.length === 2"
+                class=" custom-two-container">
+                <div *ngFor="let item of paginatedCategories" class="col-lg-4 col-md-4">
+                    <div class="product-seller-box text-center">
+                        <img [src]="item.categoryImage" style="height: 250px;" class="w-100" />
+                        <p class="product-sellertype-title py-md-3 py-2" style="font-size: 22px !important;">{{ item.productCategoryName }}</p>
+                    </div>
                 </div>
             </div>
-            }
+                <ng-container *ngIf="paginatedCategories.length > 2">
+                    <div *ngFor="let item of paginatedCategories" class="col-lg-4 col-md-6">
+                        <div class="product-seller-box text-center">
+                            <img [src]="item.categoryImage" style="height: 250px;" class="w-100" />
+                            <h5 class="product-sellertype-title py-md-3 py-2" style="font-size: 22px !important;">{{ item.productCategoryName }}</h5>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="pagination-dots text-center mt-4" *ngIf="dots.length > 1">
+            <span *ngFor="let dot of dots; let i = index" [class.active]="i + 1 === currentPage"
+                (click)="goToPage(i + 1)" class="pagination-dot"></span>
         </div>
     </div>
 </section>
+
+
+
 <section class="testimonial-section">
     <div class="container">
         <div class="section-title-contain text-center pb-5">
@@ -132,7 +162,7 @@
         </div>
         <div class="testimonial-inner_data">
             <!-- <div class=""> -->
-                <img class="product-imgs" src="assets/images/testimonial-img.png" />
+            <img class="product-imgs" src="assets/images/testimonial-img.png" />
             <!-- </div> -->
             <div class="client-review-box bg-white">
                 <div class="d-flex">
@@ -140,7 +170,8 @@
                     <p class="client-name">Jenny</p>
                 </div>
                 <div class="triangle"></div>
-                <p class="client-quote text-capitalize mt-2">the service was excellent. if you want real marketing that works and effective implementation- beauty
+                <p class="client-quote text-capitalize mt-2">the service was excellent. if you want real marketing that
+                    works and effective implementation- beauty
                     center’s got you covered.”</p>
             </div>
         </div>
