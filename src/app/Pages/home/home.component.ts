@@ -50,6 +50,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         if (res.isSuccess) {
           this.Allcategory = res.httpResponse;
           this.totalPages = Math.ceil(this.Allcategory.length / this.itemsPerPage);
+          
           this.updatePaginatedItems();
         } else {
           this.toastr.error(res.message);
