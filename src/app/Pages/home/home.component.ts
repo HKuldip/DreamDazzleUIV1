@@ -7,7 +7,7 @@ import { InstagramComponent } from '../../commonComponent/instagram/instagram.co
 import { LoginServices } from '../../Services/login.services';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -15,16 +15,27 @@ import { Subscription } from 'rxjs';
   imports: [NewslatterComponent, InstagramComponent, SlickCarouselModule, FormsModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  animations: [
+    trigger('carouselAnimation', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('1300ms', style({ opacity: 1 }))
+      ]),
+      transition('* => void', [
+        animate('1300ms', style({ opacity: 0 }))
+      ])
+    ])
+  ]
+  
 })
 export class HomeComponent implements OnInit, OnDestroy {
   Allcategory: any[] = [];
   paginatedCategories: any[] = [];
   currentPage: number = 1;
-  itemsPerPage: number = 3; 
+  itemsPerPage: number = 3;
   totalPages: number = 1;
-  dots: number[] = []; 
-  autoScrollInterval: any; 
-  slickConfig: any;
+  dots: number[] = [];
+  autoScrollInterval: any;
 
   constructor(
     private loginServices: LoginServices,
@@ -36,7 +47,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.GetAll();
     this.autoScrollInterval = setInterval(() => {
       this.nextPage();
-    }, 3000); 
+    }, 10000);
   }
 
   ngOnDestroy(): void {
@@ -45,16 +56,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  GetAll(){
+  GetAll() {
     this.loginServices.getall().subscribe((res: any) => {
-        if (res.isSuccess) {
-          this.Allcategory = res.httpResponse;
-          this.totalPages = Math.ceil(this.Allcategory.length / this.itemsPerPage);
-          this.updatePaginatedItems();
-        } else {
-          this.toastr.error(res.message);
-        }
-      });
+      if (res.isSuccess) {
+        this.Allcategory = res.httpResponse;
+        this.totalPages = Math.ceil(this.Allcategory.length / this.itemsPerPage);
+        this.updatePaginatedItems();
+      } else {
+        this.toastr.error(res.message);
+      }
+    });
   }
 
   updatePaginatedItems(): void {
@@ -62,6 +73,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     const endIndex = startIndex + this.itemsPerPage;
     this.paginatedCategories = this.Allcategory.slice(startIndex, endIndex);
     this.dots = new Array(this.totalPages).fill(0);
+    this.scrollToCurrentPage();
   }
 
   goToPage(page: number): void {
@@ -75,8 +87,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
     } else {
-      this.currentPage = 1; 
+      this.currentPage = 1;
     }
     this.updatePaginatedItems();
+  }
+
+  private scrollToCurrentPage(): void {
+    debugger
+    const elementId = `page-${this.currentPage}`;
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

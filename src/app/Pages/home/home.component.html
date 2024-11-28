@@ -118,27 +118,27 @@
         <div class="scrollable-container">
             <div class="row">
                 <div *ngIf="paginatedCategories.length === 1"
-                    class="col-lg-4 col-md-4 custom-center-container">
-                    <div class="product-seller-box">
-                        <img [src]="paginatedCategories[0]?.categoryImage" style="height: 250px;" class="w-100" />
+                    class="col-lg-4 col-md-4 custom-center-container" >
+                    <div class="product-seller-box" >
+                        <img [src]="paginatedCategories[0]?.categoryImage"     @carouselAnimation style="height: 250px;" class="w-100" />
                         <p class="product-sellertype-title py-md-3 py-2" style="font-size: 22px !important;">
                             {{ paginatedCategories[0]?.productCategoryName }}
                         </p>
                     </div>
                 </div>
                 <div *ngIf="paginatedCategories.length === 2"
-                class=" custom-two-container">
+                class=" custom-two-container" id="smooth">
                 <div *ngFor="let item of paginatedCategories" class="col-lg-4 col-md-4">
                     <div class="product-seller-box text-center">
-                        <img [src]="item.categoryImage" style="height: 250px;" class="w-100" />
+                        <img [src]="item.categoryImage" style="height: 250px;"    @carouselAnimation class="w-100" />
                         <p class="product-sellertype-title py-md-3 py-2" style="font-size: 22px !important;">{{ item.productCategoryName }}</p>
                     </div>
                 </div>
             </div>
-                <ng-container *ngIf="paginatedCategories.length > 2">
+                <ng-container *ngIf="paginatedCategories.length > 2" id="smooth">
                     <div *ngFor="let item of paginatedCategories" class="col-lg-4 col-md-6">
                         <div class="product-seller-box text-center">
-                            <img [src]="item.categoryImage" style="height: 250px;" class="w-100" />
+                            <img [src]="item.categoryImage" style="height: 250px;"    @carouselAnimation class="w-100 slide" />
                             <h5 class="product-sellertype-title py-md-3 py-2" style="font-size: 22px !important;">{{ item.productCategoryName }}</h5>
                         </div>
                     </div>
