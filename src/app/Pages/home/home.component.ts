@@ -23,6 +23,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
       ]),
       transition('* => void', [
         animate('1300ms', style({ opacity: 0 }))
+        
       ])
     ])
   ]
@@ -64,7 +65,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.updatePaginatedItems();
       } else {
         this.toastr.error(res.message);
-        
+
       }
     });
   }
