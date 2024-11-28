@@ -64,6 +64,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.updatePaginatedItems();
       } else {
         this.toastr.error(res.message);
+        
       }
     });
   }
