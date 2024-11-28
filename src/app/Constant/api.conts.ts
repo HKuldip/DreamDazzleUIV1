@@ -6,3 +6,6 @@ export const EmailVerify = BaseURI + 'User/EmailVerify';
 export const UserLogin = BaseURI + 'User/UserLogin';
 export const ForgotPassword=BaseURI+'User/ForgotPasswordSentEmail';
 export const resetPassword=BaseURI+'User/ResetPassword';
+export const getall=BaseURI+'Category/GetAll';
+
+

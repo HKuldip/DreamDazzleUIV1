@@ -320,7 +320,7 @@ img.bg-about-beauty_section {
     }
     /* .right-beauty h3, */
     /* .product-sellertype-title{
-        font-size: 20px;
+        font-size: 10px;
         line-height: 25px;
     } */
     .product_descrption{
@@ -358,3 +358,83 @@ img.bg-about-beauty_section {
         padding: 30px 0;
     }
 }
+.slick-carousel .slick-slide {
+    padding: 15px;
+  }
+  
+  .product-seller-box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-item img {
+    max-width: 100%; 
+    max-height: 250px;
+    object-fit: contain; 
+  }
+  
+  .single-image {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .pagination-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .pagination-dot.active {
+    background-color: #333;
+  }
+  
+  
+  .slick-slider {
+    background-color: white;
+  }
+  
+  .custom-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(100%,0%);
+  }
+  .custom-two-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(0%,0%);
+  }
+  
