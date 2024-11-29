@@ -95,7 +95,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private scrollToCurrentPage(): void {
-    debugger
     const elementId = `page-${this.currentPage}`;
     const element = document.getElementById(elementId);
     if (element) {
