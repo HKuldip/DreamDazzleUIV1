@@ -248,12 +248,153 @@ img.bg-about-beauty_section {
 }
 .client-review-box .client-quote,
 .client-review-box .client-name {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 35px;
     text-align: left;
 }
 
+@media screen and (max-width: 768px) {
+    .testimonial-section {
+        padding: 40px 0;
+    }
+    .client-review-box {
+        min-width: unset;
+        width: 100%;
+        padding: 15px;
+        left: -8px;
+        top: -27px;
+        margin-top: 20px;
+    }
+    .client-quote {
+        font-size: 15px !important;
+        line-height: 20px !important;
+    }
+    .client-name{
+        font-size: 20px !important;
+    }
 
+    .product-imgs{
+        height: 200px;
+        width: 800px;
+    }
+    .common-section-title {
+        font-size: 24px;
+    }
+
+    .common-section-subtitle {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .testimonial-inner_data {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-title-contain{
+        margin-bottom: 1px !important;
+    }
+    .product-imgs{
+        height: 173px;
+        width: 373px;
+    }
+    .triangle {
+        display: none;
+    }
+    .triangle1 {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 51%;
+        left: 30px;
+        border-left: 14px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 32px solid #fff;
+    }
+    
+.client-review-img{
+    width: 30px;
+    height: 30px;
+}
+    .client-review-box {
+        width: 100% !important;
+        margin-top: 45px;
+        padding: 5px;
+        margin-left: 10px;
+    }
+    
+    .home-banner_title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .client-quote {
+        font-size: 10px !important;
+        line-height: 15px !important;
+    }
+    .client-name{
+        font-size: 20px !important;
+    }
+
+    .about-beauty {
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .testimonial-inner_data {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-title-contain{
+        margin-bottom: 1px !important;
+    }
+    .triangle1 {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 51%;
+        left: 13px;
+        border-left: 14px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 27px solid #fff;
+    }
+    
+    
+    .product-imgs{
+        height: 150px;
+        width: 291px;
+        
+    }
+    .client-review-img{
+        width: 30px;
+        height: 30px;
+    }
+    .client-review-box {
+        width: 100% !important;
+        margin-top: 48px !important;
+        padding: 5px;
+        margin-left: 10px;
+    }
+
+    
+    .home-banner_title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .client-quote {
+        font-size: 10px !important;
+        line-height: 15px !important;
+    }
+    .client-name{
+        font-size: 20px !important;
+    }
+
+    .about-beauty {
+        padding: 20px 0;
+    }
+}
 /* ========= Responsive ========== */
 
 @media  screen and (max-width:1200px){
@@ -437,4 +578,22 @@ img.bg-about-beauty_section {
     text-align: center;
     transform: translate(0%,0%);
   }
-  
+  @media screen and (max-width: 768px) {
+    .custom-center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: translate(100%,0%);
+      }
+}
+
+@media screen and (max-width: 576px) {
+    .custom-center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: translate(0%,0%);
+      }
+}
